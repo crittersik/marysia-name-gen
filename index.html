@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="data/fake_names_out.js"></script>
+    <script src="data/true_names_out.js"></script>
+    <script src="js/marysia-name-gen.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/marysia-name-gen.css">
+  </head>
+
+  <p>
+    <p class="outer-box" align="center">
+    <h2 align="center">Choose which one is a genuine polish name:</h2>
+    </p>
+    <p class="outer-box">
+      <table align="center">
+        <tr>
+          <td align="right" class="display_names">
+            <div class="name" id="left-name">left name</div>
+          </td>
+          <td align="center" class="display_names">
+            <div class="vs">or</div>
+          </td>
+          <td align="left" class="display_names">
+            <div class="name" id="right-name">right name</div>
+          </td>
+        </tr>
+      </table>
+    </p>
+    <p class="bottom-box">
+      <div id="answer">&nbsp;</div>
+      <div id="genuine">genuine polish name in yellow</div>
+      <div id="fake">fake char-RNN generated name in blue</div>
+      <div id="next">NEXT</div>
+    </p>
+  </body>
+</html>

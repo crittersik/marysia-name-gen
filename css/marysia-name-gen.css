@@ -1,0 +1,73 @@
+html, body {
+  color:#FFFFFF;
+}
+
+html {
+  background-color:#000000;
+  height: 100%;
+}
+
+body {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+}
+
+h2 {
+   font-size: 2.5rem;
+}
+
+.legend {
+  padding:0.5em 1em 5em 1em;
+  width:45%;
+}
+
+.name {
+  font-size: 6.5rem;
+}
+
+.vs {
+  font-size: 3.5rem;
+}
+
+#genuine {
+   font-size: 1.5rem;
+   color:#FFFB00;
+   align: center;
+}
+
+#fake {
+   font-size: 1.5rem;
+   color:#0080FF;
+   align: center;
+}
+
+#answer {
+   margin-bottom: 1.5em;
+   font-size: 2.5rem;
+   color:#FF0000;
+   font-weight: bold;
+   align: center;
+}
+
+#next {
+   font-size: 2.5rem;
+   color:#FF0000;
+   font-weight: bold;
+   align: center;
+}
+
+.outer-box {
+  cursor: default;
+  margin-bottom: 1.25em;
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.display_names {
+  padding:2.5em 2.5em 3em 2.5em;
+}
