@@ -53,6 +53,11 @@ h2 {
    align: center;
 }
 
+.score {
+   font-size: 1.5rem;
+   color:#FFFFFF;
+}
+
 #next {
    font-size: 2.5rem;
    color:#FF0000;
@@ -70,4 +75,8 @@ h2 {
 
 .display_names {
   padding:2.5em 2.5em 3em 2.5em;
+}
+
+.display_score {
+  padding:0.5em 0.5em 0.5em 0.5em;
 }

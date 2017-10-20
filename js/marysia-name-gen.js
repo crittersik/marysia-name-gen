@@ -8,6 +8,7 @@ window.onload = function(){
   var rightName = $("#right-name")[0]
   var answer = $("#answer")[0]
   var next = $("#next")[0]
+  var score = $("#score")[0]
   var trueName = trueNames[0]
   var fakeName = fakeNames[0]
   var names = [trueName, fakeName]
@@ -22,35 +23,40 @@ window.onload = function(){
     i += 1;
   };
 
-   var color_names = function(){
+  var color_names = function(){
    if(trueName == names[0]){
-      leftName.style.color='#FFFB00'
-      rightName.style.color='#0080FF'
-    } else {
-      rightName.style.color='#FFFB00'
-      leftName.style.color='#0080FF'
+     leftName.style.color='#FFFB00'
+     rightName.style.color='#0080FF'
+   } else {
+     rightName.style.color='#FFFB00'
+     leftName.style.color='#0080FF'
+   }
+  };
+
+  var set_score = function(is_good_guess){
+    scores = score.innerHTML.split("/");
+    if (answer.innerHTML == "&nbsp;") {
+      if (is_good_guess) {
+        scores[0] = (parseInt(scores[0]) + 1).toString();
+        answer.innerHTML = "Good guess!";
+      } else {
+        answer.innerHTML = "Wrong!"
+      }
+      scores[1] = (parseInt(scores[1]) + 1).toString();
     }
+    score.innerHTML = scores[0] + "/" + scores[1];
   };
 
   setNames();
 
   leftName.onclick = function(){
-    color_names()
-    if(trueName == names[0]){
-      answer.innerHTML = "Good guess!";
-    } else {
-      answer.innerHTML = "Wrong!";
-
-    }
+    color_names();
+    set_score(trueName == names[0]);
   };
 
   rightName.onclick = function(){
-    color_names()
-    if(trueName == names[0]){
-      answer.innerHTML = "Wrong!";
-    } else {
-      answer.innerHTML = "Good guess!";
-    }
+    color_names();
+    set_score(trueName == names[1]);
   };
 
   next.onclick = function(){
@@ -59,7 +65,6 @@ window.onload = function(){
     document.getElementById("answer").innerHTML = "&nbsp;";
     setNames();
   };
-
 };
 
 function shuffle (array) {
